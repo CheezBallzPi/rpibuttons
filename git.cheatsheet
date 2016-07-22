@@ -1,0 +1,6 @@
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/CheezBallzPi/rpibuttons.git
+git push -u origin master
+
+
