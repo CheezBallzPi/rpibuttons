@@ -13,7 +13,7 @@ This repository will contain an example program and some helpful documents.
 ## The Hardware
 
 The hardware is simple. There are 8 LED lights, a buzzer and a button.
-![Picture of Circuit](circuit.png)
+![Picture of Circuit](circuit.PNG)
 
 ## The Games
 
