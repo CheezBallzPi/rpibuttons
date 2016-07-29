@@ -23,7 +23,24 @@ If you ever played in an arcade, you must have seen the game with a lot of red l
 
 ### Music Machine
 
-Using 2 or 3 buttons, set the pitch and duration of each note in a song and play it back. Lights will show which pitch/duration you are currently on.
+Create a music machine that a player can select and play songs. When the song is playing, the LED also flash the notes. Use one button to select songs, and another button to start/stop playing.
+
+### Memory Game
+
+The LED will flash in a random order in different speed for a few times. Player need to use two buttons, one move the LED light, and the other to select, and recall the same order.
+
+### Binary Timer
+
+Use the LED as a binary indicator. One button to set the time, 10 seconds increment per press. Use the other button to start the timer.
+
+### How fast can you react
+
+Player press the button once an LED is lit. Reaction time is displayed in binary format with LED. use ms as unit.
+
+### Grand Game Machine
+
+Put all the game together. Use one button to select game. The other start the game.
+ 
 
 ## Possible Changes
 - Add more Buttons
