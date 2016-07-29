@@ -177,4 +177,4 @@ try:
     GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, button1Out, button2Out, buzzer), 0)
 except:
     # If it all breaks, turn all pins off.
-    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, button1Out, buttton2Out, buzzer), 0)
+    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, button1Out, button2Out, buzzer), 0)
