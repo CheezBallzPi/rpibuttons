@@ -66,6 +66,7 @@ GPIO.setup(button2Out, GPIO.OUT)
 GPIO.setup(buzzer, GPIO.OUT)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 GPIO.output((light1, light2, light3, light4, light5, light6, light7, buzzer), 0)
 =======
@@ -74,10 +75,12 @@ GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buz
 GPIO.output(buttonOut, 1)
 
 =======
+=======
+>>>>>>> 43eb5713a2379e484be7536fffbafe7f5e514703
 GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
 GPIO.output(button1Out, 1)
 GPIO.output(button2Out, 1)
->>>>>>> Stashed changes
+
 # buzz() and play() are used for the buzzer. Feel free to copy this if you need to use the buzzer
 
 def buzz(pitch, duration):  # create the function “buzz” and feed it the pitch and duration)
