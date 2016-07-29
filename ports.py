@@ -56,5 +56,9 @@ GPIO.setup(button2Out, GPIO.OUT)
 GPIO.setup(buzzer, GPIO.OUT)
 
 GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
+<<<<<<< HEAD
 GPIO.output(button1Out, 1)
 GPIO.output(button2Out, 1)
+=======
+GPIO.output(buttonOut, 1)
+>>>>>>> master

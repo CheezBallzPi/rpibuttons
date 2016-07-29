@@ -23,10 +23,11 @@ buttonPressed = False
 light1 = 2
 light2 = 3
 light3 = 4
-light4 = 14
-light5 = 15
-light6 = 17
-light7 = 27
+light4 = 17
+light5 = 27
+light6 = 22
+light7 = 10
+light8 = 9
 
 currLight = 2
 
@@ -37,11 +38,13 @@ lightList = [light1,
              light4,
              light5,
              light6,
-             light7]
+             light7,
+             light8]
 
-buttonIn = 22
-buttonOut = 23
-
+button1In = 23
+button1Out = 24
+button2In = 8
+button2Out = 7
 # PWM pin is pin 18
 buzzer = 18
 
@@ -53,14 +56,21 @@ GPIO.setup(light4, GPIO.OUT)
 GPIO.setup(light5, GPIO.OUT)
 GPIO.setup(light6, GPIO.OUT)
 GPIO.setup(light7, GPIO.OUT)
+GPIO.setup(light8, GPIO.OUT)
 
-GPIO.setup(buttonIn, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(buttonOut, GPIO.OUT)
+GPIO.setup(button1In, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button1Out, GPIO.OUT)
+GPIO.setup(button2In, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button2Out, GPIO.OUT)
 
 GPIO.setup(buzzer, GPIO.OUT)
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 GPIO.output((light1, light2, light3, light4, light5, light6, light7, buzzer), 0)
+=======
+GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
+>>>>>>> master
 GPIO.output(buttonOut, 1)
 
 =======
@@ -90,7 +100,6 @@ def play(tune):
     GPIO.setup(buzzer, GPIO.OUT)
 
     x = 0
-    print("Playing tune ", tune)
     if tune == 1:
         # A list of possible pitches? [262, 294, 330, 349, 392, 440, 494, 523, 587, 659, 698, 784, 880, 988, 1047]
         pitches = [392, 349, 330]
@@ -119,27 +128,27 @@ try:
         # 1      - - O - O - -
         # GO     - - - O - - -
         print("3")
-        GPIO.output((light1, light7), 1)
+        GPIO.output((light1, light8), 1)
         buzz(262, 0.5)
         time.sleep(.5)
         print("2")
-        GPIO.output((light1, light7), 0)
-        GPIO.output((light2, light6), 1)
+        GPIO.output((light1, light8), 0)
+        GPIO.output((light2, light7), 1)
         buzz(262, 0.5)
         time.sleep(.5)
         print("1")
-        GPIO.output((light2, light6), 0)
-        GPIO.output((light3, light5), 1)
+        GPIO.output((light2, light7), 0)
+        GPIO.output((light3, light6), 1)
         buzz(262, 0.5)
         time.sleep(.5)
         print("GO")
-        GPIO.output((light3, light5), 0)
-        GPIO.output(light4, 1)
+        GPIO.output((light3, light6), 0)
+        GPIO.output((light4, light5), 1)
         buzz(440, 0.5)
         time.sleep(.5)
 
         while True:
-            GPIO.output((light1, light2, light3, light4, light5, light6, light7, buzzer), 0)
+            GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
 
             buttonPressed = False
             
@@ -161,7 +170,7 @@ try:
             if buttonPressed:
                 print("Button Pressed!")
                 print(currLight)
-                if currLight == 14:
+                if currLight == 9:
                     print("You Win!")
                     play(2)
                 else:
@@ -172,8 +181,8 @@ try:
                 while GPIO.input(buttonIn) is 0:
                     continue
                 break
-        GPIO.output((light1, light2, light3, light4, light5, light6, light7, buzzer), 0)
-    GPIO.output((light1, light2, light3, light4, light5, light6, light7, buttonOut, buzzer), 0)
+        GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
+    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buttonOut, buzzer), 0)
 except:
     # If it all breaks, turn all pins off.
-    GPIO.output((light1, light2, light3, light4, light5, light6, light7, buttonOut, buzzer), 0)
+    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buttonOut, buzzer), 0)
