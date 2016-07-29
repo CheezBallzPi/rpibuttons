@@ -84,7 +84,6 @@ def play(tune):
     GPIO.setup(buzzer, GPIO.OUT)
 
     x = 0
-    print("Playing tune ", tune)
     if tune == 1:
         # A list of possible pitches? [262, 294, 330, 349, 392, 440, 494, 523, 587, 659, 698, 784, 880, 988, 1047]
         pitches = [392, 349, 330]
