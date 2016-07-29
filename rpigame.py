@@ -115,10 +115,10 @@ try:
     while True:
       
         # prints 3, 2, 1, GO and lights light up in certain way:
-        # 3      O - - - - - O
-        # 2      - O - - - O -
-        # 1      - - O - O - -
-        # GO     - - - O - - -
+        # 3      O - - - - - - O
+        # 2      - O - - - - O -
+        # 1      - - O - - O - -
+        # GO     - - - O O - - -
         print("3")
         GPIO.output((light1, light8), 1)
         buzz(262, 0.5)
