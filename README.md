@@ -33,7 +33,7 @@ The LED will flash in a random order in different speed for a few times. Player 
 
 Use the LED as a binary indicator. One button to set the time, 10 seconds increment per press. Use the other button to start the timer.
 
-### How fast can you react
+### How fast can you react?
 
 Players press the button once an LED is lit. Reaction time is displayed in binary format with LED. use ms as unit.
 
