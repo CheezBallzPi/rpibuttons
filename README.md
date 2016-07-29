@@ -23,7 +23,7 @@ If you ever played in an arcade, you must have seen the game with a lot of red l
 
 ### Music Machine
 
-Create a music machine that a player can select and play songs. When the song is playing, the LED also flash the notes. Use one button to select songs, and another button to start/stop playing.
+Create a music machine that a player can select and play songs. When the song is playing, the LED also flashes the notes. Use one button to select songs, and another button to start/stop playing.
 
 ### Memory Game
 
@@ -35,13 +35,8 @@ Use the LED as a binary indicator. One button to set the time, 10 seconds increm
 
 ### How fast can you react
 
-Player press the button once an LED is lit. Reaction time is displayed in binary format with LED. use ms as unit.
+Players press the button once an LED is lit. Reaction time is displayed in binary format with LED. use ms as unit.
 
 ### Grand Game Machine
 
-Put all the game together. Use one button to select game. The other start the game.
- 
-
-## Possible Changes
-- Add more Buttons
-- Add more LED's
+Put all the games together. Use one button to select game. The other start the game.
