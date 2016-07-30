@@ -58,8 +58,10 @@ GPIO.setup(light6, GPIO.OUT)
 GPIO.setup(light7, GPIO.OUT)
 GPIO.setup(light8, GPIO.OUT)
 
-GPIO.setup(buttonIn, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(buttonOut, GPIO.OUT)
+GPIO.setup(button1In, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button1Out, GPIO.OUT)
+GPIO.setup(button2In, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button2Out, GPIO.OUT)
 
 GPIO.setup(buzzer, GPIO.OUT)
 
