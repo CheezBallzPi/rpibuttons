@@ -18,7 +18,7 @@ The hardware is simple. There are 7 LED lights, a buzzer and a button.
 ![Picture of Circuit](circuit.PNG)
 
 ## The Games
-
+Obama
 ### Catch the Light
 
 If you have ever played in an arcade, you must have seen the game with a lot of red lights and a button. The lights will light in sequence and you press the button and hope the light stop at the top. If your timing is right, then you get a lot of tickets. Well, this game is a mini version of that.
