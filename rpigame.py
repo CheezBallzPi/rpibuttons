@@ -150,11 +150,11 @@ try:
             for light in lightList:
                 GPIO.output(light, 1)
                 currLight = light
-                if GPIO.input(buttonIn):
+                if GPIO.input(button1In):
                     buttonPressed = True
                     break
                 time.sleep(sleepTime)
-                if GPIO.input(buttonIn):
+                if GPIO.input(button1In):
                     buttonPressed = True
                     break
                 time.sleep(sleepTime)
@@ -169,12 +169,12 @@ try:
                     print("You Lose...")
                     play(1)
                 print("Press Button to play again.")
-                print(GPIO.input(buttonIn))
-                while GPIO.input(buttonIn) is 0:
+                print(GPIO.input(button1In))
+                while GPIO.input(button1In) is 0:
                     continue
                 break
         GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buzzer), 0)
-    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buttonOut, buzzer), 0)
+    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, button1Out, button2Out, buzzer), 0)
 except:
     # If it all breaks, turn all pins off.
-    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, buttonOut, buzzer), 0)
+    GPIO.output((light1, light2, light3, light4, light5, light6, light7, light8, button1Out, buttton2Out, buzzer), 0)
