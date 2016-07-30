@@ -8,7 +8,7 @@ This game is created during Weldon Ridge Raspberry Pi Programming Camp 2016.
 The purpose of the camp is to provide an interactive workshop to inspire
 high school students in CS, EE, and math.
 
-We create games on the Raspberry Pi because it's fun (and educational)!!!
+We create games on the Raspberry Pi because it's fun, cool, and educational!!!
 
 This repository will contain an example program and some helpful documents.
 
