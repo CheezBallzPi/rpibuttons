@@ -1,5 +1,7 @@
 # Raspberry Pi LED Game Base
 
+# 7/30/2016
+
 ## Purpose
 
 This game is created during Weldon Ridge Raspberry Pi Programming Camp 2016.
