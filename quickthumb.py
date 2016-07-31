@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import player
 
 GPIO.setmode(GPIO.BCM)
 
@@ -72,17 +73,11 @@ def play_note(player, freq, beat):
     time.sleep(0.1 * beat)
     
 def turn_on_n_leds(n):
-
-    GPIO.output(lightList,0)
-
-    if n<0:
-        n=1
-    play([("E",.25),("D",.25),("C",.5),("E",.25),("D",.25),("C",.5),("C",0.1),("C",0.1),("C",0.1),("C",0.1),("D",0.1),("D",0.1),("D",0.1),("D",0.1),("E",.25),("D",.25),("C",.25)])
-  
-    on_list=lightList[0:n]
-    
-    print(on_list)
-    GPIO.output(on_list,1)
+    GPIO.output(lightList, 0)
+    if n < 0:
+        n = 1
+    on_list = lightList[0:n]
+    GPIO.output(on_list, 1)
 
 
 def map_ms_to_n(ms):
@@ -102,11 +97,16 @@ def pressed(channel):
     global time0
     if start:
         time0 = time.time()
-        turn_on_n_leds(0)
+        GPIO.output(lightList, 1)
     else:
+        GPIO.output(lightList, 0)
         response_time = 1000 * (time.time() - time0)
         print("Your time is {} ms".format(int(response_time)))
         turn_on_n_leds(map_ms_to_n(response_time))
+        if response_time < 150:
+            player.play(buzzer, [("C", 0.5), ("C", 0.5), ("G", 2)])
+        else:
+            player.play(buzzer, [("G", 0.5), ("F", 0.5), ("E", 0.5), ("C", 2)])
 
     start = not start
 
